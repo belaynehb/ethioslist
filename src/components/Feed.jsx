@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import { Sidebar, Videos } from "./";
-
+import Banner from "./Banner";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 
 const Feed = () => {
@@ -32,7 +32,7 @@ const Feed = () => {
           variant="body2"
           sx={{ mt: 1.5, color: "#fff" }}
         >
-          Copyright 2023 Belay tube
+          Copyright @ethioslist2023
         </Typography>
       </Box>
       <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
@@ -44,6 +44,7 @@ const Feed = () => {
         >
           {selectedCategory} <span style={{ color: "#F31503" }}>videos</span>
         </Typography>
+        {/* {selectedCategory} ? <Videos videos={videos} /> : <Banner /> */}
         <Videos videos={videos} />
       </Box>
     </Stack>
